@@ -1,2 +1,26 @@
 # gulp-limiter
-Gulp step to limit concurrent runs of a substep
+
+Limits something from running more than N times in parallel.
+
+Usage-
+
+```js
+const limiter = require('gulp-limiter');
+
+// later
+gulp.task('foo', function() {
+  const limit = limiter(5);
+
+  // nb. you should be merging these streams before return too
+  manyTasks.forEach(function() {
+    gulp.src(files)
+      **.pipe(limit(complexTask()))**
+      .pipe(gulp.dest('./dest'));
+  });
+});
+```
+
+Limiter accepts a maximum number of tasks to run in parallel.
+If unspecified, uses the number of CPUs in your machine.
+If negative, uses the number of CPUs minus that number.
+

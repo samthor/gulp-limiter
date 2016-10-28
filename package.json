@@ -1,0 +1,23 @@
+{
+  "name": "gulp-limiter",
+  "version": "1.0.0",
+  "description": "Gulp step to limit concurrent runs of a substep",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samthor/gulp-limiter.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Sam Thorogood <sam.thorogood@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/samthor/gulp-limiter/issues"
+  },
+  "homepage": "https://github.com/samthor/gulp-limiter#readme",
+  "dependencies": {
+    "duplexify": "^3.5.0",
+    "through2": "^2.0.1"
+  }
+}
