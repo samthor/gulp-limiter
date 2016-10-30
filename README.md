@@ -14,13 +14,12 @@ gulp.task('foo', function() {
   // nb. you should be merging these streams before return too
   manyTasks.forEach(function() {
     gulp.src(files)
-      **.pipe(limit(complexTask()))**
+      .pipe(limit(complexTask()))   // this line!
       .pipe(gulp.dest('./dest'));
   });
 });
 ```
 
-Limiter accepts a maximum number of tasks to run in parallel.
+Limiter accepts a maximum number of tasks to run in parallel, but always uses a minimum of one.
 If unspecified, uses the number of CPUs in your machine.
 If negative, uses the number of CPUs minus that number.
-
