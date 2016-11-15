@@ -1,3 +1,5 @@
+'use strict';
+
 /*
  * Copyright 2016 Sam Thorogood. All rights reserved.
  *
