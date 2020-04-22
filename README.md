@@ -1,6 +1,5 @@
-# gulp-limiter
-
 Limits something from running more than N times in parallel.
+Available as `gulp-limiter`.
 
 Usage-
 
